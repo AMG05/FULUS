@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { useState } from 'preact/hooks';
+import { useState, useEffect } from 'preact/hooks';
 import ExpensesNav from '../components/ExpensesNav';
 import Header from '../components/Header';
 import ExpensesList from '../components/ExpensesList';
@@ -9,34 +9,45 @@ function ExpensesContainer () {
 
     const [expenses, setExpenses] = useState([]);
     const [newExpense, setnewExpense] = useState('');
-    // const items = [];
-    // const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        const savedExpenses = localStorage.getItem('expenses');
+        if (savedExpenses) {
+            setExpenses(JSON.parse(savedExpenses));
+        }
+    }, []);
+    
 
     const handleInput = event => setnewExpense(event.target.value);
 
     function handleSubmit(event) {
         event.preventDefault();
-        setExpenses([...expenses, {name: newExpense, id: Date.now() }]);
+        const updatedExpenses = [...expenses, {name: newExpense, id:Date.now()} ];
+        setExpenses(updatedExpenses);
         setnewExpense('');
-        // console.log("submitted!");
-        // const name = event.currentTarget.item.value;
-        // const item = {
-        //     name,
-        //     id: Date.now(),
-        // };
-        // // setItems(prevItems => [...prevItems, item]);
-        // items.push(item);
-        // console.log(`There are now ${items.length} in your state`);
-        // event.target.reset();
-        // displayItems()
+       
+        localStorage.setItem('expenses', JSON.stringify(updatedExpenses));
     }
 
-    // function displayItems() {
-    //     console.log(items);
-    //     const html = items.map((item) => `<li>${item.name}</li>`).join('');
-    //     console.log(html);
-    //     // list.innerHTML = html;
-    // }
+    function handleRemove(id) {
+        const updatedExpenses = expenses.filter(item => item.id !== id);
+        setExpenses(updatedExpenses);
+        localStorage.setItem('expenses', JSON.stringify(updatedExpenses));
+    }
+
+    function handleEdit(id, newName) {
+        setExpenses(
+            expenses.map(item => {
+                if (item.id === id) {
+                    return { ...item, name: newName };
+                }
+
+                return item;
+            })
+        );
+    }
+
+   
 
 
     return (
@@ -48,9 +59,12 @@ function ExpensesContainer () {
             <input type="text" name="item" id="item" value={newExpense} onInput={handleInput} />
             <button type="submit">+ Add Expense</button>
         </form>
-        <ul className="list">
+        <ul className="list">  
             {expenses.map(item => (
-                <li key={item.id}>{item.name}</li>
+                <li key={item.id}>{item.name}
+                <button onClick={() => handleRemove(item.id)} aria-label="Remove expense">Remove</button>
+                <button onClick={() => handleEdit(item.id, prompt('Enter new expense name:'))} aria-label="Edit expense">Edit</button>
+                </li>
                 ))}
         </ul>
        
