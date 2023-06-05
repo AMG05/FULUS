@@ -59,7 +59,7 @@ function ExpensesContainer () {
             <input type="text" name="item" id="item" value={newExpense} onInput={handleInput} />
             <button type="submit">+ Add Expense</button>
         </form>
-        <ul className="list">  
+        <ul className="list">
             {expenses.map(item => (
                 <li key={item.id}>{item.name}
                 <button onClick={() => handleRemove(item.id)} aria-label="Remove expense">Remove</button>
