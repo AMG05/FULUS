@@ -1,8 +1,12 @@
 import { h } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
-import ExpensesNav from '../components/ExpensesNav';
 import Header from '../components/Header';
 import ExpensesList from '../components/ExpensesList';
+import Balance from '../components/Balance';
+import Graph from '../components/Graph';
+import NavBar from '../components/NavBar';
+import IncomeExpense from '../components/IncomeExpense';
+import ExpensesForm from '../components/ExpensesForm';
 
 
 function ExpensesContainer () {
@@ -48,15 +52,19 @@ function ExpensesContainer () {
     }
 
    
-
-
     return (
     <div>
-        <Header />
+        <NavBar />
+        {/* <Header /> */}
+        <Balance />
+        <IncomeExpense />
+        {/* <Graph /> */}
+        
         <div class="expenses-list">
         <h1 className="title">Recent transactions</h1>
         <form class="expenses" autocomplete="off" onSubmit={handleSubmit}>
-            <input type="text" name="item" id="item" value={newExpense} onInput={handleInput} />
+        <label for="text">Text</label>
+            <input type="text" name="item" id="text" placeholder="Enter text" value={newExpense} onInput={handleInput} />
             <button type="submit">+ Add Expense</button>
         </form>
         <ul className="list">
@@ -67,10 +75,10 @@ function ExpensesContainer () {
                 </li>
                 ))}
         </ul>
-       
         </div>
-        <ExpensesList />
-        
+        {/* <ExpensesList />
+        <ExpensesForm /> */}
+       
         
     </div>
     );

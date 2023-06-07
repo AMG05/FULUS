@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+// .outer-container {
+//     display: flex;
+//     justify-content: center;
+//     padding: 18px 5%;
+//     width: auto;
+//     flex-wrap: wrap;
+// }
+
+// .navbar-container {
+//     flex: 2;
+//     display: flex;
+//     align-items: center;
+//     gap: 30px;
+// }
+.img {
+    max-width: 100%;
+    height:auto;
+}
+.left-navbar {
+    // flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.link-items {
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        // flex: 2;
+        font-family: 'Lato';
+        text-transform: uppercase;
+        
+}
+
+.link-items a {
+        font-weight: 500;
+        color: rgb(18, 18, 141);
+        text-decoration: inherit;
+        transition: color 0.2s ease-out;
+        font-size: larger;
+      }
+      a:hover {
+        color: #101828;
+      }
+
+
+
+
+
+
+

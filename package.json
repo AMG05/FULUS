@@ -85,6 +85,7 @@
   "dependencies": {
     "@microsoft/applicationinsights-web": "^2.2.4",
     "@stormid/toggle": "^1.0.0-alpha.18",
+    "chart.js": "^4.3.0",
     "es6-object-assign": "^1.1.0",
     "picturefill": "^3.0.3",
     "preact-router": "^4.1.1",

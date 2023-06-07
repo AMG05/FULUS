@@ -1,7 +1,8 @@
 import { h } from 'preact';
 import { Router, Link } from 'preact-router';
 
-const Header = ({ }) => 
+const Header = ({ }) =>
+
 <header class="header">
     <div class="wrap">
         <div class="outer-container">
@@ -9,9 +10,17 @@ const Header = ({ }) =>
                 <div class="left-navbar">
                     <img src="src\img\logo-png.png" width="127" />
                     <div className="link-items">
-                    <a id="Transactions" href="/transactions">Transactions</a>
-                    <a id="Expenses" href="/expenses">Add expenses</a>
-                    <a id="Budget" href="/budget">Budget</a>
+                    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">Expenses</Link>
+      </li>
+      <li>
+        <Link to="/pricing">Pricing</Link>
+      </li>
+    </ul>
                     </div>
                 </div>
                 <div class="right-navbar">
@@ -21,6 +30,8 @@ const Header = ({ }) =>
             </div>
         </div>
     </div>
-</header>;
+    
+</header>
+;
 
 export default Header;
