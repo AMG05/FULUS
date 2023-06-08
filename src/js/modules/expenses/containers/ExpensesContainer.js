@@ -13,6 +13,8 @@ function ExpensesContainer () {
 
     const [expenses, setExpenses] = useState([]);
     const [newExpense, setnewExpense] = useState('');
+    // const [amount, setAmount] = useState(0);
+    // const [newAmount, setnewAmount] = useState();
 
     useEffect(() => {
         const savedExpenses = localStorage.getItem('expenses');
@@ -65,6 +67,8 @@ function ExpensesContainer () {
         <form class="expenses" autocomplete="off" onSubmit={handleSubmit}>
         <label for="text">Text</label>
             <input type="text" name="item" id="text" placeholder="Enter text" value={newExpense} onInput={handleInput} />
+            {/* <input type="amount" placeholder="Enter amount" value={amount} onChange={handleAmountChange} */}
+            {/* /> */}
             <button type="submit">+ Add Expense</button>
         </form>
         <ul className="list">
@@ -76,8 +80,8 @@ function ExpensesContainer () {
                 ))}
         </ul>
         </div>
-        {/* <ExpensesList />
-        <ExpensesForm /> */}
+        {/* <ExpensesList /> */}
+        {/* <ExpensesForm /> */}
        
         
     </div>
