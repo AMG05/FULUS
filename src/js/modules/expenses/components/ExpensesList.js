@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import ExpensesContainer from '../containers/ExpensesContainer';
+import ExpensesContainer from '../../expensesVS2/containers/ExpensesContainer';
 
 function ExpensesList () {
     

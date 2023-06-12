@@ -1,51 +1,24 @@
-import { h, useState } from 'preact';
-import ExpensesNav from '../components/ExpensesNav';
-import Header from '../components/header';
+import { h, Fragment } from 'preact';
 
-function ExpensesForm() {
-    const [newExpense, setNewExpense] = useState('');
-    const [expenses, setExpenses] = useState([]);
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        const updatedExpenses = [
-            ...expenses,
-            { name: newExpense, id: Date.now() },
-        ];
-        setExpenses(updatedExpenses);
-        setNewExpense('');
-
-        localStorage.setItem('expenses', JSON.stringify(updatedExpenses));
-    }
-
-    const handleInput = event => setNewExpense(event.target.value);
-
+function ExpensesForm({ onSubmit, onInput, value }) {
     return (
-        <>
-        
-        <h3>Add new transaction</h3>
-        <form className="expenses" autoComplete="off" onSubmit={handleSubmit}>
-        <div className="form-control">
-          <label htmlFor="text">Text</label>
-          <input
-              type="text"
-              name="item"
-              placeholder="Enter text"
-              value={newExpense}
-              onInput={handleInput}
-          />
-          <div className="form-control">
-            <label htmlFor="amount">
-              Amount <br />
-              (negative - expense, positive - income)
-            </label>
-            <input type="number" placeholder="Enter amount..." />
-          </div>
-          <button type="submit">+ Add Expense</button>
-          </div>
+      <Fragment>
+          <h3 class="form-title">Add new transaction</h3>
+          <form class="expenses" autoComplete="off" onSubmit={onSubmit}>
+            <div class="form-control">
+                <label htmlFor="text">Text</label>
+                <input type="text" name="name" id="name" placeholder="Enter text" value={value.name} onInput={onInput} />
+            </div>
+            <div class="form-control">
+                <label htmlFor="amount">
+                    Amount <br />
+                    (negative - expense, positive - income)
+                </label>
+                <input type="number" id="amount" name="amount" placeholder="Enter amount..." value={value.amount} onInput={onInput}  />
+            </div>
+            <button type="submit">+ Add Expense</button>
         </form>
-     
-        </>
+      </Fragment>
     );
 }
 
