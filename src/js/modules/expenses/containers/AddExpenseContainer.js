@@ -6,6 +6,7 @@ import ExpensesForm from '../components/ExpensesForm';
 function AddExpenseContainer () {
     const [newExpense, setNewExpense] = useState({ name: '',  amount: '' });
     const [expenses, setExpenses] = useState([]);
+    const [error, setError] = useState();
 
     useEffect(() => {
         const savedExpenses = localStorage.getItem('expenses');
@@ -19,6 +20,13 @@ function AddExpenseContainer () {
 
     const handleSubmit = event => {
         event.preventDefault();
+        if (newExpense.name === '' || newExpense.amount === ''){
+            setError(true);
+            return;
+        }
+        
+        setError(false);
+        
         const updatedExpenses = [...expenses, { ...newExpense, id: Date.now() } ];
         setNewExpense({ name: '',  amount: '' });
         localStorage.setItem('expenses', JSON.stringify(updatedExpenses));
@@ -26,7 +34,7 @@ function AddExpenseContainer () {
     };
 
    
-    return <ExpensesForm onSubmit={handleSubmit} onInput={handleInput} value={newExpense}  />
+    return <ExpensesForm onSubmit={handleSubmit} onInput={handleInput} value={newExpense} error={error} />;
 }
 
 export default AddExpenseContainer;

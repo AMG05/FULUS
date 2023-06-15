@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;700&family=Montserrat:wght@300;400;700&family=Noto+Sans:ital@0;1&family=Oxygen&family=Oxygen+Mono&display=swap');
+
+// .inc-exp-container {
+//     @include column(8);
+// }
+
+// .inc-exp-container {
+//     width: calc(((99.999% / 12) * 9) - (24px))
+// }
+
+.inc-exp-container {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    margin-left: calc(var(--gutter)*4);
+    margin-right: calc(var(--gutter)*4);
+    border-radius: 5px;
+    
+  }
+  
+  .inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .inc-exp-container > div:first-of-type {
+    border-right: 1px solid #dedede;
+  }
+  
+  .money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+  }
+  
+
+  .money.plus {
+    font-family: dosis;
+    color: var(--off-black);
+    font-weight: 600;
+  }
+  
+  .money.minus {
+    font-family: dosis;
+    color: black;
+    font-weight: 600;
+  }
+
+h4{
+    font-family: dosis;
+    font-weight: 500;
+    color:var(--off-black);
+}
+

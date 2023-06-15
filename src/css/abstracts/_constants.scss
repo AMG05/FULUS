@@ -1,5 +1,6 @@
+@import url(https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;700&family=Montserrat:wght@300;400;700&family=Noto+Sans:ital@0;1&family=Oxygen&family=Oxygen+Mono&display=swap);
 :root {
-    --font-family-default: sans-serif;
+    --font-family-default: system;
     
     --font-size-plus-4: 1rem;
     --font-size-plus-3: 1rem;
@@ -27,6 +28,12 @@
     --off-black: hsl(0, 0%, 10%);
     --highlight: hsl(49, 98%, 56%);
     --default-color: hsl(0, 0%, 10%);
+    --green: #729599;
+    --blue: #BCC5CE;
+    --cream: #E6DFD9;
+    --brown: #BFB3A8;
+    --dark: #7A7067;
+    
 
     --light-weight: 300;
     --regular-weight: 400;

@@ -2,6 +2,12 @@
 	width: column-calc($num);
 }
 
+
+@mixin col{
+    margin-left: calc(var(--gutter)*.5);
+    margin-right: calc(var(--gutter)*.5);
+}
+
 @mixin wrap {
     max-width: var(--max-container-width);
     margin:0 auto;

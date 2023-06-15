@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;700&family=Montserrat:wght@300;400;700&family=Noto+Sans:ital@0;1&family=Oxygen&family=Oxygen+Mono&display=swap');
+
+.expenses-list {
+    @include wrap;
+   
+}
+
+  .expenses-list-page {
+    background-color: #fff;
+    box-shadow: var(box-shadow);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: calc(var(--gutter)*2);
+    margin-right: calc(var(--gutter)*2);
+    border-radius: 5px;
+  }
+
+.expenses-list__title {
+    color: var(--dark-grey-3);
+    font-family: dosis;
+    font-weight: 500;
+    font-size: x-large;
+    text-align: center;
+}
+
+.expenses-list-container{
+    flex-grow: 2;
+    margin: 10px;
+  }
+
+  .expenses-list{
+    width: 80%;
+    border-radius: 25px;
+    padding: .5rem 1.5rem;
+    flex-flow: wrap;
+   
+  }
+
+ 
+  .expenses-item{
+    border-radius: 25px;
+    border: 1px solid var(--light-grey-2);
+    background-color: var(--light-grey-1);
+    padding: .5rem 1.5rem;
+    font-family: dosis;
+    display: flex;
+    gap: rem;
+    align-items: center;
+  //   display: wrap;
+  }
+
+.button-container {
+    display: flex;
+//     gap: 0.5rem;
+//     // display: flex-end;
+//     flex:wrap;
+}
+
+button {
+    background-color: #729599;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    border-style: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.4rem .8rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease-out;
+  }
+
+  button:hover {
+    background-color: #80B180;
+  }
+  
+
+
+
+
+

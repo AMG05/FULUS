@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar';
 import IncomeExpense from '../components/IncomeExpense';
 
 
+
 function ExpensesContainer () {
     const [expenses, setExpenses] = useState([]);
 
@@ -38,28 +39,33 @@ function ExpensesContainer () {
     <div>
         <NavBar />
         <Balance />
-        <IncomeExpense />
+        <IncomeExpense expenses={expenses} />
         
-        <div class="expenses-list">
-            <h1 class="title">Recent transactions</h1>
+        <div className="expenses-list-page">
+            <h1 className="expenses-list__title">Recent transactions</h1>
+            <div className="expenses-list-container">
             {
                 expenses.length > 0
-                    ? <ul class="list">
+                    ? <ul class="expenses-list">
                         {expenses.map(item => (
-                            <li key={item.id}>
-                                {item.name}
+                            <li className="expenses-item" key={item.id}>Name: 
+                                {item.name}Amount:
                                 {item.amount}
-                                <button onClick={() => handleRemove(item.id)} aria-label="Remove expense">Remove</button>
-                                <button onClick={() => handleEdit(item.id, prompt('Enter new expense name:'))} aria-label="Edit expense">Edit</button>
-                            </li>
+                                <div className="button-container">
+                                <button className="button-remove" onClick={() => handleRemove(item.id)} aria-label="Remove expense">Remove</button>
+                                <button className="button-edit" onClick={() => handleEdit(item.id, prompt('Enter new expense name:'))} aria-label="Edit expense">Edit</button>
+                                </div>
+                                </li>
                             ))}
                     </ul>
                     : <p class="message">No expenses yet</p>
             }
+            </div>
         </div>
-        
+       
     </div>
     );
 }
+
 
 export default ExpensesContainer;
