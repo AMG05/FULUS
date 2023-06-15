@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;700&family=Montserrat:wght@300;400;700&family=Noto+Sans:ital@0;1&family=Oxygen&family=Oxygen+Mono&display=swap);
+
 @font-face {
   font-family: system;
   font-style: normal;
@@ -10,8 +12,13 @@
        local("Roboto-Light"),
        local("DroidSans"),
        local("Tahoma");
+       
 }
-body,
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 button {
   .btn {
     background-color: #09433D;
