@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import { Router, Link } from 'preact-router';
 import Match from 'preact-router/match';
+import baseroute from '../../../../baseroute';
 
 const NavBar = () => (
         <nav className="outer-container">
@@ -9,9 +10,9 @@ const NavBar = () => (
                     <li className="left-navbar">
                   <h1><a href=""><img src ="" aria-hidden="true"></img><span>FULUS</span></a></h1>
                     </li>
-                        <li><Link href="/">Home</Link></li>
-                        <li><Link href="/expenses">Add expenses</Link></li>
-                        <li><Link href="/budget">Budget</Link></li>
+                        <li><Link href={`${baseroute}/`}>Home</Link></li>
+                        <li><Link href={`${baseroute}/expenses`}>Add expenses</Link></li>
+                        <li><Link href={`${baseroute}/budget`}>Budget</Link></li>
                         <li><a className="btn-login" href="/login">Login</a></li>
             </ul>
             </div>
