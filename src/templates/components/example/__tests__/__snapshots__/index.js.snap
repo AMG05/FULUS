@@ -7,11 +7,13 @@ Object {
   "__c": null,
   "__d": undefined,
   "__e": null,
+  "__h": null,
   "__k": null,
+  "__v": 2,
   "constructor": undefined,
-  "key": null,
+  "key": undefined,
   "props": Object {},
-  "ref": null,
+  "ref": undefined,
   "type": [Function],
 }
 `;
@@ -23,11 +25,13 @@ Object {
   "__c": null,
   "__d": undefined,
   "__e": null,
+  "__h": null,
   "__k": null,
+  "__v": 3,
   "constructor": undefined,
-  "key": null,
+  "key": undefined,
   "props": Object {},
-  "ref": null,
+  "ref": undefined,
   "type": [Function],
 }
 `;
@@ -39,7 +43,9 @@ Object {
   "__c": null,
   "__d": undefined,
   "__e": null,
+  "__h": null,
   "__k": null,
+  "__v": 4,
   "constructor": undefined,
   "key": undefined,
   "props": Object {
@@ -60,11 +66,13 @@ Object {
   "__c": null,
   "__d": undefined,
   "__e": null,
+  "__h": null,
   "__k": null,
+  "__v": 1,
   "constructor": undefined,
-  "key": null,
+  "key": undefined,
   "props": Object {},
-  "ref": null,
+  "ref": undefined,
   "type": [Function],
 }
 `;
