@@ -1,7 +1,7 @@
 import { h } from 'preact';
 
 
-function calculateExpenses (expenses)  {
+export function calculateExpenses (expenses)  {
 
     
     let totalIncome = 0;

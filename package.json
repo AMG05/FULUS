@@ -40,6 +40,7 @@
     "@storybook/addon-links": "^6.3.12",
     "@storybook/addon-storysource": "6.3.2",
     "@storybook/preact": "^6.5.10",
+    "@testing-library/preact": "^3.2.3",
     "autoprefixer": "^9.3.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^26.3.0",
