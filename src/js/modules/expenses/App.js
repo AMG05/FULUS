@@ -12,9 +12,9 @@ const App = () => (
       <Link href="/expenses">Expenses</Link>
     </nav> */}
     <Router>
-      <Route path={`${baseroute}/` component={ExpensesContainer} />
+      <Route path={`${baseroute}/`} component={ExpensesContainer} />
       <Route path={`${baseroute}/expenses`} component={AddExpenseContainer} />
-      <Route path={`${baseroute}/budget` component={Budget} />
+      <Route path={`${baseroute}/budget`} component={Budget} />
     </Router>
   </div>
 );
