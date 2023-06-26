@@ -1,5 +1,5 @@
 .footer{
-    background-color:#BCC5CE;
+    background-color:var(--darkblue);
     border-top:1px solid var(--light-grey-3);
     padding:calc(var(--baseline)) 0 calc(var(--baseline)) 0;
     margin-top: auto;
@@ -12,19 +12,20 @@
     justify-content: space-between;
     margin-bottom: 0.5rem;
     font-family: dosis;
-    background-color: #BCC5CE;
+    background-color: var(--darkblue);
     
 }
 
 .slogan {
     font-size: smaller;
     text-align: left;
+    color: var(--light-grey-1);
 }
 
 .fulus {
     font-size: small;
     text-align: left;
-    color: var(--dark-grey-3);
+    color: var(--light-grey-2);
 }
 
 .footer-right-container {
@@ -36,6 +37,7 @@
 .small-print {
     padding-top: 0.5rem;
     font-size: xx-small;
+    color: var(--light-grey-1)
 }
 
 li {

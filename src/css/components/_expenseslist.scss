@@ -59,7 +59,7 @@
 }
 
 button {
-    background-color: #729599;
+    background-color: #2C7373;
     padding: 0.5rem;
     border-radius: 5px;
     display: flex;
@@ -75,7 +75,7 @@ button {
   }
 
   button:hover {
-    background-color: #80B180;
+    background-color: var(--highlight);
   }
   
 

@@ -5,7 +5,7 @@ nav {
   font-family: dosis;
   font-size: 100%;
   padding: 1rem;
-  background-color: #BCC5CE;
+  background-color: var(--darkblue);
 }
 
 nav h1 a {
@@ -31,24 +31,24 @@ nav li:first-child {
 
 
 nav a {
-  color: var(--dark-grey-3);
+  color: var(--light-grey-1);
   text-decoration: none;
   display: block; 
 }
 
 nav a:hover,
   nav [class*="fa-"]:hover{
-  color: #7A7067;
+  color: var(--highlight);
 }
 
 .btn-login {
-  background-color: #729599;
+  background-color: #2C7373;
   padding: 0.5rem;
   border-radius: 5px;
 }
 .button:hover {
   color: #E6DFD9;
-  background-color: #729599;
+  background-color: var(--highlight);
 }
 
 @media (min-width: 850px){
